@@ -1,0 +1,16 @@
+
+Genarate The Important Files From STM32CubeMX based on your target MCU
+
+Fill the stm32_toolchain_conf.cmake file to identify two important parameters
+
+1. <TARGET_MCU> To specify target microcontroller Unit Wit it's peripherals
+2. <MCU_FAMILY> The family to which MCU Belongs
+
+Steps
+--->Open up stm32_toolchain_conf.cmake
+---> Change the Default value in file 
+         set(TARGET_MCU <option>) write your option
+         like STM32H750xx, line become set(TARGET_MCU STM32H750xx)
+
+         set(MCU_FAMILY <option>) write your option
+         like stm32h7xx, line become set(MCU_FAMILY stm32h7xx)

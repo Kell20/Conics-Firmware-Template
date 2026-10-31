@@ -1,0 +1,39 @@
+{
+	"version": 3,
+	"cmakeMinimumRequired": {
+		"major": 3,
+		"minor": 27
+	},
+	
+	"configurePresets":
+	[
+		{
+			"name": "base",
+			"hidden": true,
+			"generator": "Ninja",
+			"toolchainFile": "${sourceDir}/toolchain_file/ToolChain.cmake"
+		},
+		
+		
+		{
+			"name": "debug",
+			"inherits": "base",
+			"binaryDir": "${sourceDir}/Builds/debug",
+			"cacheVariables":
+			{
+				"CMAKE_BUILD_TYPE": "DEBUG"
+			}
+		},
+		
+
+		{
+			"name": "release",
+			"inherits": "base",
+			"binaryDir": "${sourceDir}/Builds/release",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "MinSizeRel"
+			}
+		}
+		
+	]
+}
