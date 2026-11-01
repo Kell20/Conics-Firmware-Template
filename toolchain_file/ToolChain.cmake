@@ -16,7 +16,7 @@ set(OBJ_CPY ${TOOLCHAIN_PREFIX}-objcopy)
 set(OBJ_SIZE ${TOOLCHAIN_PREFIX}-size)
 set(OBJ_DUMP ${TOOLCHAIN_PREFIX}-objdump)
  
-set(C_FLAGS ${C_DEFS}
+set(C_FLAGS 
     -mcpu=cortex-m7
     -fdata-sections
     -ffunction-sections   
@@ -29,7 +29,6 @@ set(C_FLAGS ${C_DEFS}
 set(LINKER_FLAGS   
     -Wl,--print-memory-usage
     -Wl,--gc-sections
-    -Wl,--print-gc-sections
     -Wl,--start-group -lm -Wl,--end-group
     --specs=nano.specs
 )
