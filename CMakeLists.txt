@@ -6,7 +6,7 @@ cmake_minimum_required(
 )
 
 project(
-    parero_devB
+    PCXFirmware
     LANGUAGES C ASM
     VERSION 1.0
     DESCRIPTION "Firmware Template for Flexible MCU Family"
@@ -41,6 +41,10 @@ target_link_options(${CMAKE_PROJECT_NAME} PRIVATE
     ${C_FLAGS}  
     ${LINKER_FLAGS} 
     -T${LINKER_SCRIPT}
+)
+
+target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
+    ${C_DEFS}
 )
 
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE 
