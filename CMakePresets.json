@@ -18,7 +18,7 @@
 		{
 			"name": "debug",
 			"inherits": "base",
-			"binaryDir": "${sourceDir}/Builds/debug",
+			"binaryDir": "${sourceDir}/Builds",
 			"cacheVariables":
 			{
 				"CMAKE_BUILD_TYPE": "DEBUG"
