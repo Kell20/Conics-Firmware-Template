@@ -8,6 +8,22 @@ set(TARGET_MCU STM32H750xx)
 set(MCU_FAMILY stm32h7xx)
 
 set(C_DEFS
-    -DUSE_HAL
-    -D${TARGET_MCU}
+    USE_HAL
+    ${TARGET_MCU}
+)
+set(C_FLAGS 
+    -mcpu=cortex-m7
+    -fdata-sections
+    -ffunction-sections   
+    -mfpu=fpv5-d16
+    -mfloat-abi=hard
+    -flto
+    -O0
+)
+
+set(LINKER_FLAGS   
+    -Wl,--print-memory-usage
+    -Wl,--gc-sections
+    -Wl,--start-group -lm -Wl,--end-group
+    --specs=nano.specs
 )
