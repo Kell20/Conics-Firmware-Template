@@ -29,7 +29,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE 
     ${CMAKE_SOURCE_DIR}/driver/helper
-    ${CMAKE_SOURCE_DIR}/driver
+    ${CMAKE_SOURCE_DIR}/driver/Includes
 )
 
 target_compile_options( ${CMAKE_PROJECT_NAME} PRIVATE
