@@ -8,9 +8,13 @@ Fill the stm32_toolchain_conf.cmake file to identify two important parameters
 
 Steps
 --->Open up stm32_toolchain_conf.cmake
----> Change the Default value in file 
+---> Change the Default values in file 
          set(TARGET_MCU <option>) write your option
          like STM32H750xx, line become set(TARGET_MCU STM32H750xx)
 
          set(MCU_FAMILY <option>) write your option
          like stm32h7xx, line become set(MCU_FAMILY stm32h7xx)
+
+         you can set required Compiler definitions, Link options and Compiler options 
+         variable set(C_FLAGS <Values>) values depend on ur target platform 
+         set(LINKER_FLAGS <Values>)
